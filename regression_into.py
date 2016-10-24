@@ -24,7 +24,46 @@ mean_XY    = np.mean([x*y for x,y in zip(X, Y)])
 mean_Xsq    = np.mean([x*x for x in list(X)])
 
 
-print mean_Y, mean_X, mean_XY, mean_Xsq
+#print mean_Y, mean_X, mean_XY, mean_Xsq
 
 
 #Then once we have calculated all of these terms, we can use the formulas to compute the slope and intercept.
+#numerator = (sum of X*Y) - (1/N)*((sum of X) * (sum of Y))
+#denominator = (sum of X^2) - (1/N)*((sum of X) * (sum of X))
+
+#which is the same as (after dividing numeratro and denominator by N)
+#numerator = (mean of X*Y) - (mean of X)*(mean of Y)
+#denominator = (mean of X^2) - (mean of X)*(mean of X)
+
+numerator   = mean_XY - (mean_X*mean_Y)
+denominator = (mean_Xsq) - (mean_X)*(mean_X)
+slope       = numerator/denominator
+
+#intercept = (mean of Y) - slope * (mean of X)
+intercept = (mean_Y) - slope * (mean_X)
+
+print "numerator = ", numerator, "denominator = ", denominator, "slope = ", slope, "intercept = ", intercept
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
