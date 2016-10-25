@@ -1,4 +1,4 @@
-# Computing regression parameters
+# Computing regression line using closed form solution
 
 import numpy as np
 
@@ -20,7 +20,7 @@ Y = [1, 3, 7, 13, 21]
 
 mean_Y  = np.mean(Y)
 mean_X  = np.mean(X)
-mean_XY    = np.mean([x*y for x,y in zip(X, Y)])
+mean_XY = np.mean([x*y for x,y in zip(X, Y)])
 mean_Xsq    = np.mean([x*x for x in list(X)])
 
 
