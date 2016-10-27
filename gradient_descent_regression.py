@@ -44,7 +44,7 @@ errors      = [-1, -3, -7, -13, -21]                    #  prediction errors (pr
 derivative_intercept  = sum(errors)                               # derivative: sum(errors)
 adjustment  = step_size * derivative_intercept
 new_intercept   = initial_intercept - adjustment
-print new_intercept
+#print new_intercept
 
 #update slope
 derivative_slope  = sum([x*y for x,y in zip(X, errors)])           # X * errors
@@ -52,7 +52,7 @@ derivative_slope  = sum([x*y for x,y in zip(X, errors)])           # X * errors
 adjustment  = step_size * derivative_slope
 new_slope   = initial_slope - adjustment
 #print new_slope
-magnitude = np.sqrt(np.square(derivative_intercept) + np.square(derivative_slope))
+magnitude = np.sqrt(np.square(derivative_intercept) + np.square(derivative_slope)) 
 #print np.square(derivative_intercept) - np.square(derivative_slope)
 print magnitude
 
